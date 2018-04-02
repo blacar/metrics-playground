@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Simon Oulevay (Alpha Hydrae) <docker@alphahydrae.com>
+MAINTAINER Rafael Blazquez
 
 ENV PROMETHEUS_VERSION="1.5.0"
 ENV PROMETHEUS_FILENAME="prometheus-${PROMETHEUS_VERSION}.linux-amd64"
