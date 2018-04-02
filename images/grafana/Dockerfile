@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Simon Oulevay (Alpha Hydrae) <docker@alphahydrae.com>
+MAINTAINER Rafael Blazquez
 
 RUN apt-get update -qq \
     && apt-get install -q -y apt-transport-https ca-certificates curl
