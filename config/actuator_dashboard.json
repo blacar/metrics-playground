@@ -113,7 +113,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "histogram_quantile(0.95, sum(rate(http_server_requests_seconds_bucket{status=\"200\", uri=\"/actuator/prometheus\", job=\"$Environment\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.95, sum(rate(psp_op_bucket{status=\"200\", uri=\"/actuator/prometheus\", job=\"$Environment\"}[$__interval])) by (le))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -195,7 +195,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum by (job)(rate(http_server_requests_seconds_count{uri=\"/actuator/prometheus\", job=\"$Environment\"}[5m]))",
+          "expr": "sum by (job)(rate(psp_op_count{uri=\"/actuator/prometheus\", job=\"$Environment\"}[$__interval]))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
